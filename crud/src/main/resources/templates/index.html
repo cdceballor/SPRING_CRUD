@@ -20,23 +20,22 @@
                 </tr>
             </thead>
             <tbody>
-                <tr th:each="people:${peoples}">
+                <tr th:each="people:${people}">
                     <td th:text="${people.id}"></td>
                     <td th:text="${people.name}"></td>
                     <td th:text="${people.phone}"></td>
                     <td>
                         <a th:href="@{/edit/}+${people.id}" class="btn btn-warning">Edit</a>
-                        <a th:href="@{/delete/}+${people.id}" class="btn btn-danger">Delete</a>
+                        <a th:onclick="d([[${people.id}]])" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="functions.js"></script>
-    onclick="d([[${people.id}]]) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js "></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script>
+    <script src="functions.js "></script>
 </body>
 
 </html>
