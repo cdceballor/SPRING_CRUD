@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <table class="table">
+            <a th:href="@{/new}" class="btn btn-primary">New</a>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>PHONE</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="people:${peoples}">
+                    <td th:text="${people.id}"></td>
+                    <td th:text="${people.name}"></td>
+                    <td th:text="${people.phone}"></td>
+                    <td>
+                        <a th:href="@{/edit/}+${people.id}" class="btn btn-warning">Edit</a>
+                        <a th:href="@{/delete/}+${people.id}" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="functions.js"></script>
+    onclick="d([[${people.id}]]) -->
+</body>
+
+</html>
