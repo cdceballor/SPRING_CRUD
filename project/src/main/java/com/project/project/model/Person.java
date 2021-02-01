@@ -16,19 +16,29 @@ public class Person {
 	private String phone;
 	private String email;
 	private String gender;
+<<<<<<< HEAD:project/src/main/java/com/project/project/model/Person.java
 	private String disease;
+=======
+>>>>>>> c745332f47815d0592b516eb9d54eb26bfe8477f:project/src/main/java/com/project/project/model/Person.java
 	
 	public Person() {
 		// TODO Auto-generated method stub
 	}
+<<<<<<< HEAD:project/src/main/java/com/project/project/model/Person.java
 	public Person(int id, String name, String phone, String email, String gender, String disease) {
+=======
+	public Person(int id, String name, String phone, String email, String gender) {
+>>>>>>> c745332f47815d0592b516eb9d54eb26bfe8477f:project/src/main/java/com/project/project/model/Person.java
 		super();
 		this.id=id;
 		this.name=name;
 		this.phone=phone;
 		this.email=email;
 		this.gender=gender;
+<<<<<<< HEAD:project/src/main/java/com/project/project/model/Person.java
 		this.disease=disease;
+=======
+>>>>>>> c745332f47815d0592b516eb9d54eb26bfe8477f:project/src/main/java/com/project/project/model/Person.java
 	}
 	public int getId() {
 		return id;
@@ -45,9 +55,12 @@ public class Person {
 	public String getGender(){
 		return gender;
 	}
+<<<<<<< HEAD:project/src/main/java/com/project/project/model/Person.java
 	public String getDisease(){
 		return disease;
 	}
+=======
+>>>>>>> c745332f47815d0592b516eb9d54eb26bfe8477f:project/src/main/java/com/project/project/model/Person.java
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -63,7 +76,10 @@ public class Person {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+<<<<<<< HEAD:project/src/main/java/com/project/project/model/Person.java
 	public void setDisease(String disease) {
 		this.disease = disease;
 	}
+=======
+>>>>>>> c745332f47815d0592b516eb9d54eb26bfe8477f:project/src/main/java/com/project/project/model/Person.java
 }

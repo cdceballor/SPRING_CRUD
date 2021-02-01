@@ -56,11 +56,14 @@ public class HomeController {
 	public String save(@Validated Person p, Model model) {
 		service.save(p);
 		return "redirect:/product";
+<<<<<<< HEAD:project/src/main/java/com/project/project/controllers/HomeController.java
 	}
 	@GetMapping("/product")
 	public String listUser(Model model, @RequestParam(defaultValue="")  String name){
 		model.addAttribute("people",service.findByName(name));
 		return "product";
+=======
+>>>>>>> c745332f47815d0592b516eb9d54eb26bfe8477f:project/src/main/java/com/project/project/controllers/HomeController.java
 	}
 
 	@GetMapping("/edit/{id}")
