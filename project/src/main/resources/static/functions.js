@@ -26,3 +26,31 @@ function d(id) {
             }
         });
 }
+
+function gpdf(id) {
+    swal({
+            title: "Do you want to generate a PDF?",
+            icon: "info",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((OK) => {
+            if (OK) {
+                $.ajax({
+                    url: "/genPDF/" + id,
+                    success: function(res) {
+                        console.log(res);
+                    },
+                });
+                swal("Your file have been generated!", {
+                    icon: "success",
+                }).then((ok) => {
+                    if (ok) {
+                        location.href = "/product";
+                    }
+                });
+            } else {
+                swal("Do not generated :c!");
+            }
+        });
+}
