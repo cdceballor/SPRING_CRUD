@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="col-sm-6">
+            <form th:action="@{/save}" th:object=${person} method="POST">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Person module</h3>
+                    </div>
+                    <div class="card-body">
+                        
+                        <div class="form-group">
+                            <label>NAME</label>
+                            <input th:field="*{name}" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>PHONE</label>
+                            <input th:field="*{phone}" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>EMAIL</label>
+                            <input th:field="*{email}" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>GENDER</label>
+                            <input th:field="*{gender}" type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>DISEASE</label>
+                            <input th:field="*{disease}" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <input type="submit" value="save" class="btn btn-success">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
