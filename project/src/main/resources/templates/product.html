@@ -8,9 +8,10 @@
 </head>
 
 <body>
-    <div class="container mt-4">
+    <div class="container md-8">
         <form action="/product" class="form-inline">
             <div class="form-group mb-2">
+                <form action="@{/product}" th:object="{name}" method="GET"></form>
                 <input type="text" class="form-control" name="name" placeholder="Search" />
                 <input type="submit" value="Search" class="btn btn-primary" />
             </div>

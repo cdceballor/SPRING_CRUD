@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,23 +18,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.project.project.interService.interfaceService;
 import com.project.project.model.Person;
+import com.project.project.service.service;
 
 
 //@RestController
 @Controller
 @RequestMapping
 public class HomeController {
-	/**
-	@RequestMapping("/api/example")
-	public ResponseEntity<String> index() {
-		return ResponseEntity.ok("Hello World!");
-	}
-
-	@RequestMapping("/costumers")
-	public int CustomerController() {
-		return Customer.suma();
-	}
-	*/
 	@Autowired
 	private interfaceService service;
 
@@ -71,9 +62,10 @@ public class HomeController {
 		service.delete(id);
 		return "redirect:/product";
 	}
+
 	@GetMapping("/list")
-	public String listUser(Model model, @RequestParam(defaultValue="")  String name){
-		model.addAttribute("people",service.findByName(name));
-		return "list";
+	public String buscarPorNombre(@RequestParam String name, Model model, @ModelAttribute("people") Person person) {
+		model.addAttribute("people", service.buscarPorNombre(name));
+		return "product";
 	}
 }

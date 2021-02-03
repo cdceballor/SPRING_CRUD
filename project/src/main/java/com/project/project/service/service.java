@@ -40,7 +40,7 @@ public class service implements interfaceService {
 	}
 
 	@Override
-	public List<Person> findByName(String name) {
-		return data.findByNameLike("%"+name+"%");
+	public List<Person> buscarPorNombre(String name) {
+		return data.findByName(name);
 	}
 }

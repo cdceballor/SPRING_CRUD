@@ -8,6 +8,6 @@ public interface interfaceService {
 	public Optional<Person>listPersonById(int id);
 	public int save(Person person);
 	public void delete(int id);
-	public List<Person> findByName(String name);
+	public List<Person> buscarPorNombre(String name);
 }
 
