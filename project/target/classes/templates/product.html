@@ -9,11 +9,11 @@
 
 <body>
     <div class="container md-8">
-        <form action="/product" class="form-inline">
+        <form action="/listPeople" class="form-inline" method="GET">
             <div class="form-group mb-2">
-                <form action="@{/product}" th:object="{name}" method="GET"></form>
                 <input type="text" class="form-control" name="name" placeholder="Search" />
                 <input type="submit" value="Search" class="btn btn-primary" />
+
             </div>
         </form>
         <div></div>
@@ -47,8 +47,8 @@
                 </tr>
             </tbody>
         </table>
+        <a th:href="@{/product}" class="btn btn-success">Go back</a>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.js "></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script>
     <script src="functions.js "></script>

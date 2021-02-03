@@ -18,8 +18,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.project.project.interService.interfaceService;
 import com.project.project.model.Person;
-import com.project.project.service.service;
-
 
 //@RestController
 @Controller
@@ -63,7 +61,7 @@ public class HomeController {
 		return "redirect:/product";
 	}
 
-	@GetMapping("/list")
+	@GetMapping("/listPeople")
 	public String buscarPorNombre(@RequestParam String name, Model model, @ModelAttribute("people") Person person) {
 		model.addAttribute("people", service.buscarPorNombre(name));
 		return "product";

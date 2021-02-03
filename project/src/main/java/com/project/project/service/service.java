@@ -14,6 +14,7 @@ import com.project.project.model.Person;
 public class service implements interfaceService {
 	@Autowired
 	private inter data;
+
 	@Override
 	public List<Person> list() {
 		return (List<Person>)data.findAll();
@@ -41,6 +42,6 @@ public class service implements interfaceService {
 
 	@Override
 	public List<Person> buscarPorNombre(String name) {
-		return data.findByName(name);
+		return (List<Person>)data.findByName(name);
 	}
 }
